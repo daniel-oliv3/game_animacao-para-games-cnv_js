@@ -71,10 +71,11 @@ window.onload = function(){
     }
 
     function update(){
-
+        sapup3.move();
     }
 
     function draw(){
+        ctx.clearRect(0, 0, cnv.width, cnv.height);
         sapup3.draw(ctx);
     }
 
