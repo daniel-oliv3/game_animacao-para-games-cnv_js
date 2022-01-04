@@ -9,6 +9,42 @@ window.onload = function(){
     var sapup3 = new Sprite(spriteSheet);
 
 
+    
+
+    //interação
+    window.addEventListener("keydown", keydownHandler, false);
+    window.addEventListener("keyup", keyupHandler, false);
+
+
+    function keydownHandler(e){
+        switch(e.keyCode){
+            case RIGHT:
+                sapup3.mvRight = true;
+                sapup3.mvLeft = false;
+                sapup3.mvUp = false;
+                sapup3.mvDown = false;
+                break;
+            case LEFT:
+                sapup3.mvRight = false;
+                sapup3.mvLeft = true;
+                sapup3.mvUp = false;
+                sapup3.mvDown = false;
+                break;
+            case UP:
+                sapup3.mvRight = false;
+                sapup3.mvLeft = false;
+                sapup3.mvUp = true;
+                sapup3.mvDown = false;
+                break;
+            case DOWN:
+                sapup3.mvRight = false;
+                sapup3.mvLeft = false;
+                sapup3.mvUp = false;
+                sapup3.mvDown = true;
+                break;    
+        }
+    }
+
     spriteSheet.onload = function(){
         init();
     }

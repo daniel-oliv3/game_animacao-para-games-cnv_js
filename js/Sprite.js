@@ -1,5 +1,6 @@
 function Sprite(img){
     //Atributos
+    this.mvRight = this.mvUp = this.mvLeft = this.mvDown = false;
     this.srcX = this.srcY = 0;
     this.width = 24;
     this.height = 32;
