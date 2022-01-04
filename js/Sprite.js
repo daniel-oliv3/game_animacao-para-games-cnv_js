@@ -7,12 +7,14 @@ function Sprite(img){
     this.posX = this.posY = 0;
     this.img = img;
     this.speed = 1;
+    this.countAnim = 0;
 
     //Metodos
 
     //Desenha
     this.draw = function(ctx){
         ctx.drawImage(this.img, this.srcX, this.srcY, this.width, this.height, this.posX, this.posY, this.width, this.height);
+        this.animation();
     }
 
     //Move
@@ -32,6 +34,20 @@ function Sprite(img){
         if(this.mvDown){
             this.posY += this.speed;
             this.srcY = this.height * 0;
+        }
+    }
+    //Animação
+    this.animation = function(){
+        if(this.mvLeft || this.mvDown || this.mvUp || this.mvRight){
+            this.countAnim++;
+            if(this.countAnim >= 40){
+                this.countAnim = 0;
+            }
+            this.srcX = Math.floor(this.countAnim / 5) * this.width;
+
+
+
+
         }
     }
 }
