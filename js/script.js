@@ -5,8 +5,9 @@ window.onload = function(){
     var ctx =  cnv.getContext("2d");
     var spriteSheet = new Image();
     spriteSheet.src = "img/img.png";
-
     var sapup3 = new Sprite(spriteSheet);
+    var scene = new Image();
+    scene.src = "img/scene.png";
 
 
     
@@ -67,6 +68,7 @@ window.onload = function(){
     }
 
     function init(){
+        sapup3.posX = sapup3.posY = 150;
         loop();
     }
 
@@ -76,6 +78,7 @@ window.onload = function(){
 
     function draw(){
         ctx.clearRect(0, 0, cnv.width, cnv.height);
+        ctx.drawImage(scene, 0, 0, scene.width, scene.height, 0, 0, cnv.width, cnv.height);
         sapup3.draw(ctx);
     }
 
