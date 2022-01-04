@@ -49,26 +49,14 @@ window.onload = function(){
         switch(e.keyCode){
             case RIGHT:
                 sapup3.mvRight = false;
-                sapup3.mvLeft = true;
-                sapup3.mvUp = true;
-                sapup3.mvDown = true;
                 break;
             case LEFT:
-                sapup3.mvRight = true;
                 sapup3.mvLeft = false;
-                sapup3.mvUp = true;
-                sapup3.mvDown = true;
                 break;
             case UP:
-                sapup3.mvRight = true;
-                sapup3.mvLeft = true;
                 sapup3.mvUp = false;
-                sapup3.mvDown = true;
                 break;
             case DOWN:
-                sapup3.mvRight = true;
-                sapup3.mvLeft = true;
-                sapup3.mvUp = true;
                 sapup3.mvDown = false;
                 break;    
         }
